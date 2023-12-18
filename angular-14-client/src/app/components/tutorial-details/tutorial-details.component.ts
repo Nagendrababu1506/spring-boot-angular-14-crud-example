@@ -15,7 +15,8 @@ export class TutorialDetailsComponent implements OnInit {
   @Input() currentTutorial: Tutorial = {
     title: '',
     description: '',
-    published: false
+    published: false,
+     priceUri: ''
   };
   
   message = '';
@@ -47,7 +48,8 @@ export class TutorialDetailsComponent implements OnInit {
     const data = {
       title: this.currentTutorial.title,
       description: this.currentTutorial.description,
-      published: status
+      published: status,
+      priceUri: this.currentTutorial.priceUri
     };
 
     this.message = '';
